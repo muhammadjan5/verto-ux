@@ -1,0 +1,46 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  flex: 1;
+  justify-content: center;
+}
+
+.error,
+.success {
+  padding: 0.65rem 0.85rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--verto-panel-border);
+}
+
+.error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-color: #b91c1c;
+}
+
+.success {
+  background: #f0fdf4;
+  color: #166534;
+  border-color: #166534;
+}

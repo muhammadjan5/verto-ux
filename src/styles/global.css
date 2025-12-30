@@ -1,0 +1,143 @@
+:root {
+  --verto-bg: #f8f7f4;
+  --verto-panel: #ffffff;
+  --verto-text: #111111;
+  --verto-muted: #666666;
+  --verto-border: #dcdad3;
+  --verto-panel-border: #111111;
+  --verto-black: #111111;
+  --verto-highlight: #facc15;
+  --verto-radius: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--verto-bg);
+  color: var(--verto-text);
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--verto-bg);
+}
+
+.app-shell__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--verto-panel-border);
+  background: #fff;
+  color: var(--verto-text);
+  letter-spacing: 0.02em;
+}
+
+.btn svg {
+  pointer-events: none;
+}
+
+.btn--filled {
+  background: var(--verto-black);
+  color: #fff;
+  border-color: var(--verto-black);
+}
+
+.btn--ghost {
+  background: transparent;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid var(--verto-border);
+  border-radius: 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  width: 100%;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--verto-panel-border);
+}
+
+.toast-stack {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 1000;
+}
+
+.toast {
+  min-width: 240px;
+  border: 1px solid var(--verto-panel-border);
+  background: #fff;
+  color: var(--verto-text);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.toast--success {
+  background: var(--verto-highlight);
+  color: var(--verto-black);
+  border-color: var(--verto-black);
+}
+
+.toast--error {
+  background: var(--verto-black);
+  color: #fff;
+  border-color: var(--verto-highlight);
+}
+
+.toast__close {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  color: inherit;
+  cursor: pointer;
+}

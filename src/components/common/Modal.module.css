@@ -1,0 +1,46 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.panel {
+  background: #fff;
+  width: min(640px, 100%);
+  max-height: 90vh;
+  border: 1px solid var(--verto-panel-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--verto-panel-border);
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.content {
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.closeButton {
+  border: none;
+  background: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  display: inline-flex;
+}
